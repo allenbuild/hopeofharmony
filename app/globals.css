@@ -5304,7 +5304,7 @@ h2 em {
 /* Finish the Team page with the roles themselves, not overlapping decoration. */
 .roles-section {
   margin-bottom: 0;
-  padding-block: clamp(64px, 7vw, 96px) 20px;
+  padding-block: clamp(64px, 7vw, 96px);
   background: var(--sage-soft);
 }
 
