@@ -5316,6 +5316,7 @@ h2 em {
 .roles-section .role-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
   gap: 20px;
   border: 0;
 }
@@ -5328,11 +5329,6 @@ h2 em {
   border: 0;
   background: var(--paper);
   box-shadow: 8px 8px 0 var(--blush);
-}
-
-.roles-section .role-list > div:nth-child(even) {
-  background: rgba(244, 241, 232, 0.82);
-  box-shadow: 8px 8px 0 rgba(174, 191, 167, 0.72);
 }
 
 .roles-section .role-list span {
