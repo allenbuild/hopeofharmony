@@ -5725,3 +5725,20 @@ h2 em {
     grid-template-columns: minmax(0, 680px);
   }
 }
+
+/* Keep the mission on the true page center, independent of the side content. */
+@media (min-width: 1200px) {
+  .site-footer .footer-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 520px) minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .site-footer .footer-mission {
+    width: 100%;
+  }
+
+  .site-footer .footer-contact {
+    width: 100%;
+    justify-self: end;
+  }
+}
