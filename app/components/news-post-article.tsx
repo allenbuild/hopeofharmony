@@ -17,7 +17,6 @@ export function NewsPostArticle({ post }: { post: NewsPost }) {
           <div className="post-meta">
             <span>{post.author}</span>
             <span>{post.date}</span>
-            <span>{post.readTime}</span>
             {post.updated ? <span>{post.updated}</span> : null}
           </div>
         </header>

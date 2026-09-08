@@ -79,7 +79,6 @@ export type NewsPost = {
   author: string;
   date: string;
   updated?: string;
-  readTime: string;
   likes: number;
   cover: string;
   images: string[];
@@ -94,7 +93,6 @@ export const newsPosts: NewsPost[] = [
     place: "The Kensington",
     author: "Lin Zhang",
     date: "Aug 5, 2025",
-    readTime: "0 min read",
     likes: 3,
     cover: "/assets/editorial/kensington-1.jpg",
     images: [
@@ -112,7 +110,6 @@ export const newsPosts: NewsPost[] = [
     author: "Lin Zhang",
     date: "Jul 20, 2025",
     updated: "Updated: Jul 24, 2025",
-    readTime: "0 min read",
     likes: 3,
     cover: "/assets/editorial/arcadia-1.jpg",
     images: [
@@ -133,7 +130,6 @@ export const newsPosts: NewsPost[] = [
     author: "Lin Zhang",
     date: "Jul 20, 2025",
     updated: "Updated: Jul 24, 2025",
-    readTime: "0 min read",
     likes: 0,
     cover: "/assets/editorial/ivy-park-1.jpg",
     images: [
@@ -152,7 +148,6 @@ export const newsPosts: NewsPost[] = [
     place: "Arcadia Retirement Village",
     author: "Lin Zhang",
     date: "Jul 16, 2025",
-    readTime: "0 min read",
     likes: 0,
     cover: "/assets/editorial/arcadia-retirement-1.jpg",
     images: [
@@ -171,7 +166,6 @@ export const newsPosts: NewsPost[] = [
     place: "Glenn Park Event #2",
     author: "Lin Zhang",
     date: "Aug 6, 2024",
-    readTime: "0 min read",
     likes: 0,
     cover: "/assets/editorial/glenn-park-2-1.jpg",
     images: [
@@ -188,7 +182,6 @@ export const newsPosts: NewsPost[] = [
     place: "Glenn Park Event #1",
     author: "Lin Zhang",
     date: "Jul 22, 2024",
-    readTime: "0 min read",
     likes: 0,
     cover: "/assets/editorial/glenn-park-1-1.jpg",
     images: [
@@ -207,7 +200,6 @@ export const newsPosts: NewsPost[] = [
     author: "Lin Zhang",
     date: "Feb 29, 2024",
     updated: "Updated: Mar 19, 2024",
-    readTime: "0 min read",
     likes: 0,
     cover: "/assets/editorial/faith-united-1.jpg",
     images: ["/assets/editorial/faith-united-1.jpg"],

@@ -29,7 +29,7 @@ export default function NewsPage() {
                 />
               </Link>
               <div className="news-index-copy">
-                <p>{post.author} · {post.readTime}</p>
+                <p>{post.author}</p>
                 <h2>
                   <span className="news-event-date">{post.eventDate}</span>
                   <Link aria-label={post.title} href={`/news/${post.slug}`}>
