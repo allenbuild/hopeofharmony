@@ -23,26 +23,44 @@ export function ContactForm() {
   }
 
   return (
-    <form className="modern-form" onSubmit={handleSubmit}>
-      <label>
+    <form
+      className="modern-form"
+      aria-labelledby="contact-page-title"
+      onSubmit={handleSubmit}
+    >
+      <label htmlFor="contact-name">
         <span>Name</span>
-        <input name="name" type="text" required />
+        <input
+          id="contact-name"
+          name="name"
+          type="text"
+          autoComplete="name"
+          required
+        />
       </label>
-      <label>
+      <label htmlFor="contact-email">
         <span>Email</span>
-        <input name="email" type="email" required />
+        <input
+          id="contact-email"
+          name="email"
+          type="email"
+          autoComplete="email"
+          required
+        />
       </label>
-      <label>
+      <label htmlFor="contact-subject">
         <span>Subject</span>
-        <input name="subject" type="text" required />
+        <input id="contact-subject" name="subject" type="text" required />
       </label>
-      <label>
+      <label htmlFor="contact-message">
         <span>Message</span>
-        <textarea name="message" rows={5} required />
+        <textarea id="contact-message" name="message" rows={5} required />
       </label>
       <div className="form-submit-row">
         <button className="button" type="submit">Submit <span aria-hidden="true">↗</span></button>
-        <p role="status" aria-live="polite">{submitted ? "Thanks for submitting!" : ""}</p>
+        <p role="status" aria-live="polite" aria-atomic="true">
+          {submitted ? "Thanks for submitting!" : ""}
+        </p>
       </div>
     </form>
   );

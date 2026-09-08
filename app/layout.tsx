@@ -20,7 +20,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://hopeofharmony.org"),
   title: {
     default: "Hope of Harmony",
     template: "%s | Hope of Harmony",

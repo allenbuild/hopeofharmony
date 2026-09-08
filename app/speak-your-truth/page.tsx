@@ -144,7 +144,15 @@ export default function SpeakYourTruthPage() {
               <h2>Rolling Basis</h2>
             </div>
           </div>
-          <a className="button submission-button" href={submissionUrl}>Submit your work <span aria-hidden="true">↗</span></a>
+          <a
+            className="button submission-button"
+            href={submissionUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Submit your work via Google Forms (opens in a new tab)"
+          >
+            Submit your work <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </section>
     </PageFrame>

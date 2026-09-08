@@ -12,7 +12,17 @@ export default function JoinPage() {
         title={<>Interest Form:</>}
         showMark={false}
         intro="Open to students, 6th grade and above."
-        aside={<a className="button join-hero-link" href={interestForm}>Join us <span aria-hidden="true">↗</span></a>}
+        aside={
+          <a
+            className="button join-hero-link"
+            href={interestForm}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Join us via Google Forms (opens in a new tab)"
+          >
+            Join us <span aria-hidden="true">↗</span>
+          </a>
+        }
       />
 
       <section className="section-space join-story">
@@ -64,7 +74,15 @@ export default function JoinPage() {
               of Harmony, please fill this form out. If you are confused or have
               questions, please DM <a href="https://www.instagram.com/hopeofharmony_">hopeofharmony_</a> on Instagram or reach us through email: <a href="mailto:harmonyofhope.org@gmail.com">harmonyofhope.org@gmail.com</a>.
             </p>
-            <a className="button" href={interestForm}>Join us <span aria-hidden="true">↗</span></a>
+            <a
+              className="button"
+              href={interestForm}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Join us via Google Forms (opens in a new tab)"
+            >
+              Join us <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
       </section>

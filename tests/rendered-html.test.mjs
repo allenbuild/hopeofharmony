@@ -2,14 +2,14 @@ import assert from "node:assert/strict";
 import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
-async function render(pathname = "/") {
+async function render(pathname = "/", requestHeaders = {}) {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${pathname}`);
   const { default: worker } = await import(workerUrl.href);
 
   return worker.fetch(
     new Request(`http://localhost${pathname}`, {
-      headers: { accept: "text/html" },
+      headers: { accept: "text/html", ...requestHeaders },
     }),
     {
       ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) },
@@ -20,7 +20,7 @@ async function render(pathname = "/") {
 
 const routes = [
   ["/", /Our mission: to uplift the community/],
-  ["/about", /Who we/],
+  ["/about", /Who We/],
   ["/team", /Alyssa Guo/],
   ["/join", /Open to students, 6th grade and above/],
   ["/speak-your-truth", /Submission Deadline/],
@@ -33,10 +33,10 @@ const routes = [
   ["/news/glenn-park-event-1", /Music and laughter filled the halls/],
   ["/news/faith-united-methodist-church", /Faith United Methodist Church/],
   ["/contact", /Subject/],
-  ["/about-us", /Who we/],
+  ["/about-us", /Who We/],
   ["/our-team", /Alyssa Guo/],
   ["/join-us", /Interest Form/],
-  ["/contact-us", /Email us/],
+  ["/contact-us", /Email Us/],
   ["/general-7", /Speak Your Truth/],
   ["/blog", /July 22nd, 2025: The Kensington/],
 ];
@@ -73,6 +73,7 @@ test("preserves the source content and project-local editorial assets", async ()
   assert.match(css, /prefers-reduced-motion/);
   assert.match(form, /Thanks for submitting!/);
   assert.match(layout, /openGraph/);
+  assert.doesNotMatch(layout, /http:\/\/localhost:3000/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
 
   const assets = [
@@ -95,4 +96,29 @@ test("preserves the source content and project-local editorial assets", async ()
   await Promise.all(
     assets.map((asset) => access(new URL(`../public/assets/${asset}`, import.meta.url))),
   );
+});
+
+test("uses the canonical production origin for absolute metadata URLs", async () => {
+  const response = await render("/");
+  const html = await response.text();
+
+  assert.match(html, /content="https:\/\/hopeofharmony\.org\/og\.png"/);
+  assert.doesNotMatch(html, /http:\/\/localhost:3000/);
+});
+
+test("opens every Google Form CTA safely in a new tab", async () => {
+  for (const pathname of ["/", "/join", "/speak-your-truth"]) {
+    const response = await render(pathname);
+    const html = await response.text();
+    const formLinks = html.match(
+      /<a\b[^>]*href="https:\/\/(?:forms\.gle|docs\.google\.com\/forms)[^"]*"[^>]*>/g,
+    ) ?? [];
+
+    assert.ok(formLinks.length > 0, `Google Form CTA missing on ${pathname}`);
+    for (const link of formLinks) {
+      assert.match(link, /target="_blank"/);
+      assert.match(link, /rel="noopener noreferrer"/);
+      assert.match(link, /aria-label="[^"]*opens in a new tab[^"]*"/i);
+    }
+  }
 });

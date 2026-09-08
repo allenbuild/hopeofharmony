@@ -26,7 +26,15 @@ export default function HomePage() {
             <h1>Our Mission: To Uplift the Community Through Classical Music &amp; Various Enrichment Activities</h1>
             <div className="button-row">
               <Link className="button" href="/about">learn more <span aria-hidden="true">↗</span></Link>
-              <a className="text-link" href="https://forms.gle/Rxo3mqPqjCaG6pBh7">join us <span aria-hidden="true">→</span></a>
+              <a
+                className="text-link"
+                href="https://forms.gle/Rxo3mqPqjCaG6pBh7"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Join us via Google Forms (opens in a new tab)"
+              >
+                join us <span aria-hidden="true">→</span>
+              </a>
             </div>
             <div className="home-truth-sticker">
               <Image

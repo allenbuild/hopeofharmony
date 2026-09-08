@@ -8,10 +8,10 @@ export default function ContactPage() {
     <PageFrame active="contact">
       <PageHero
         className="contact-hero"
-        title={<>Email Us</>}
+        title={<span id="contact-page-title">Email Us</span>}
         showMark={false}
         aside={
-          <div className="contact-hero-card">
+          <address className="contact-hero-card" style={{ fontStyle: "normal" }}>
             <Image
               src="/assets/editorial/team-portrait-a.png"
               alt=""
@@ -22,11 +22,14 @@ export default function ContactPage() {
             <a className="hero-email" href="mailto:harmonyofhope.org@gmail.com">
               harmonyofhope.org@gmail.com
             </a>
-          </div>
+          </address>
         }
       />
 
-      <section className="section-space contact-page">
+      <section
+        className="section-space contact-page"
+        aria-labelledby="contact-page-title"
+      >
         <div className="container contact-page-grid">
           <div className="contact-art" aria-hidden="true">
             <Image src="/assets/editorial/team-portrait-b.png" alt="" width={1600} height={900} unoptimized />
