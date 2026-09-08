@@ -10,7 +10,10 @@ export function NewsPostArticle({ post }: { post: NewsPost }) {
       <article className="post-page">
         <header className="post-header container">
           <Link className="back-link" href="/news">← All Posts</Link>
-          <h1>{post.title}</h1>
+          <div className="post-title-block">
+            <p className="post-event-date">{post.eventDate}</p>
+            <h1>{post.place}</h1>
+          </div>
           <div className="post-meta">
             <span>{post.author}</span>
             <span>{post.date}</span>
