@@ -5742,3 +5742,15 @@ h2 em {
     justify-self: end;
   }
 }
+
+/* Keep the two president profiles as a single, evenly sized row. */
+@media (min-width: 821px) {
+  .team-lead-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .team-profile.offset {
+    margin-top: 0;
+  }
+}
