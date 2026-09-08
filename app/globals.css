@@ -543,9 +543,10 @@ h2 em {
   background-image:
     radial-gradient(circle at center, rgba(244, 241, 232, 0.94) 0 17px, transparent 18px),
     url("/assets/daffodils.png");
-  background-position: center, -46px -63px;
+  background-position: center, -56px -69px;
   background-repeat: no-repeat;
-  background-size: 100% 100%, 450px auto;
+  background-size: 100% 100%, 520px auto;
+  border-radius: 50%;
   color: var(--forest-deep);
   filter: drop-shadow(2px 5px 3px rgba(18, 39, 31, 0.24));
   font-size: 14px;
