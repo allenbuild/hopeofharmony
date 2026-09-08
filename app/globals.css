@@ -5747,12 +5747,60 @@ h2 em {
 @media (min-width: 821px) {
   .team-lead-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: start;
+    align-items: end;
   }
 
   .team-profile,
   .team-profile.offset {
     height: auto;
     margin-top: 0;
+  }
+}
+
+/* Keep the categories banner and artwork stationary while guidelines expand. */
+.category-section {
+  --category-banner-height: 250px;
+  position: relative;
+  background: var(--sage);
+}
+
+.category-section::before {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: var(--category-banner-height);
+  background:
+    linear-gradient(118deg, rgba(254, 255, 214, 0.72) 0 42%, transparent 42.2%),
+    var(--sage);
+  content: "";
+  pointer-events: none;
+}
+
+.category-section > .section-heading-row {
+  z-index: 1;
+  box-sizing: border-box;
+  height: var(--category-banner-height);
+  min-height: 0;
+}
+
+.category-layout {
+  align-items: start;
+}
+
+.category-image {
+  align-self: start;
+}
+
+@media (max-width: 820px) {
+  .category-section {
+    --category-banner-height: 205px;
+  }
+}
+
+@media (max-width: 520px) {
+  .category-section {
+    --category-banner-height: 178px;
   }
 }
