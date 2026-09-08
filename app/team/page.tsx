@@ -8,7 +8,7 @@ export default function TeamPage() {
     <PageFrame active="team">
       <PageHero
         className="team-hero"
-        title={<>Our team</>}
+        title={<>Our Team</>}
       />
 
       <section className="section-space team-leads">

@@ -35,11 +35,11 @@ export function SiteFooter() {
           />
         </div>
         <p className="footer-mission">
-          Our mission: to uplift the community through classical music &amp;
-          various enrichment activities
+          Our Mission: To Uplift the Community Through Classical Music &amp;
+          Various Enrichment Activities
         </p>
         <div className="footer-contact">
-          <p className="footer-label">Email us</p>
+          <p className="footer-label">Email Us</p>
           <a href="mailto:harmonyofhope.org@gmail.com">
             harmonyofhope.org@gmail.com
           </a>

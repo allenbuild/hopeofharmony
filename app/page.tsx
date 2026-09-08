@@ -23,7 +23,7 @@ export default function HomePage() {
             />
           </div>
           <div className="home-mission-card">
-            <h1>Our mission: to uplift the community through classical music &amp; various enrichment activities</h1>
+            <h1>Our Mission: To Uplift the Community Through Classical Music &amp; Various Enrichment Activities</h1>
             <div className="button-row">
               <Link className="button" href="/about">learn more <span aria-hidden="true">↗</span></Link>
               <Link className="text-link" href="/join">join us <span aria-hidden="true">→</span></Link>
@@ -48,7 +48,7 @@ export default function HomePage() {
             <Image src="/assets/harmony-monogram.png" alt="" width={1080} height={1080} unoptimized />
           </div>
           <div className="home-about-copy">
-            <h2>Who we are:</h2>
+            <h2>Who We Are:</h2>
             <p>
               Hope of Harmony is a student-led 501(c)(3) nonprofit organization
               dedicated to making a positive impact in our community through

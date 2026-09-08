@@ -8,7 +8,7 @@ export default function ContactPage() {
     <PageFrame active="contact">
       <PageHero
         className="contact-hero"
-        title={<>Email us</>}
+        title={<>Email Us</>}
         showMark={false}
         aside={
           <div className="contact-hero-card">

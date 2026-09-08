@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <PageFrame active="about">
       <PageHero
-        title={<>Who we are:</>}
+        title={<>Who We Are:</>}
       />
 
       <section className="section-space about-editorial">
