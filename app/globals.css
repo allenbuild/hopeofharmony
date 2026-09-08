@@ -5743,14 +5743,16 @@ h2 em {
   }
 }
 
-/* Keep the two president profiles as a single, evenly sized row. */
+/* Keep the president profiles equal in width without stretching their height. */
 @media (min-width: 821px) {
   .team-lead-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: stretch;
+    align-items: start;
   }
 
+  .team-profile,
   .team-profile.offset {
+    height: auto;
     margin-top: 0;
   }
 }
