@@ -36,16 +36,6 @@ export default function HomePage() {
                 join us <span aria-hidden="true">→</span>
               </a>
             </div>
-            <div className="home-truth-sticker">
-              <Image
-                src="/assets/editorial/speak-your-truth.png"
-                alt="Speak Your Truth"
-                width={1800}
-                height={1800}
-                priority
-                unoptimized
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -65,37 +55,6 @@ export default function HomePage() {
               the arts more accessible.
             </p>
             <Link className="button" href="/about">about us <span aria-hidden="true">↗</span></Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="truth-feature truth-feature-rich">
-        <div className="container truth-feature-grid">
-          <div className="truth-art">
-            <Image
-              src="/assets/editorial/speak-your-truth.png"
-              alt="Speak Your Truth creative competition"
-              width={1800}
-              height={1800}
-              unoptimized
-            />
-          </div>
-          <div className="truth-copy">
-            <h2>SYT: Join the Competition!</h2>
-            <p>
-              In collaboration, Hope of Harmony and A.R.T.S proudly present the
-              nationwide Speak Your Truth competition—an open call for creators
-              of all ages to express their unique perspectives through art,
-              music, writing, or photography. Winners in each category and
-              division will be awarded certificates, with First Place receiving
-              a $100 cash prize.
-            </p>
-            <p>
-              Participants are encouraged to explore and communicate their truths
-              through various artistic disciplines, responding to the issues and
-              experiences that matter most to them.
-            </p>
-            <Link className="button button-dark" href="/speak-your-truth">learn more <span aria-hidden="true">↗</span></Link>
           </div>
         </div>
       </section>

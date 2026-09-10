@@ -23,7 +23,6 @@ const routes = [
   ["/about", /Who We/],
   ["/team", /Alyssa Guo/],
   ["/join", /Open to students, 6th grade and above/],
-  ["/speak-your-truth", /Submission Deadline/],
   ["/news", /July 22nd, 2025: The Kensington/],
   ["/news/kensington", /July 22nd, 2025: The Kensington/],
   ["/news/arcadia-living", /Updated: Jul 24, 2025/],
@@ -37,7 +36,6 @@ const routes = [
   ["/our-team", /Alyssa Guo/],
   ["/join-us", /Interest Form/],
   ["/contact-us", /Email Us/],
-  ["/general-7", /Speak Your Truth/],
   ["/blog", /July 22nd, 2025: The Kensington/],
 ];
 
@@ -52,6 +50,18 @@ test("server-renders every redesigned Hope of Harmony page", async () => {
     assert.match(html, /Our mission: to uplift the community/);
     assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/i);
   }
+});
+
+test("keeps Speak Your Truth hidden", async () => {
+  for (const pathname of ["/speak-your-truth", "/general-7"]) {
+    const response = await render(pathname);
+    assert.equal(response.status, 404, pathname);
+  }
+
+  const response = await render("/");
+  const html = await response.text();
+  assert.doesNotMatch(html, /href="\/speak-your-truth"/);
+  assert.doesNotMatch(html, /Speak Your Truth/);
 });
 
 test("preserves the source content and project-local editorial assets", async () => {
@@ -107,7 +117,7 @@ test("uses the canonical production origin for absolute metadata URLs", async ()
 });
 
 test("opens every Google Form CTA safely in a new tab", async () => {
-  for (const pathname of ["/", "/join", "/speak-your-truth"]) {
+  for (const pathname of ["/", "/join"]) {
     const response = await render(pathname);
     const html = await response.text();
     const formLinks = html.match(

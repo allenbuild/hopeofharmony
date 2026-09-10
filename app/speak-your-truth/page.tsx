@@ -1,9 +1,12 @@
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import { PageFrame } from "../components/page-frame";
 import { PageHero } from "../components/page-hero";
 import { categories, submissionUrl } from "../site-data";
 
 export default function SpeakYourTruthPage() {
+  notFound();
+
   return (
     <PageFrame active="truth">
       <PageHero

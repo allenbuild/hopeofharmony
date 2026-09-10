@@ -1,6 +1,5 @@
 export const navigation = [
   { label: "home", href: "/", key: "home" },
-  { label: "speak your truth", href: "/speak-your-truth", key: "truth" },
   { label: "about us", href: "/about", key: "about" },
   { label: "our team", href: "/team", key: "team" },
   { label: "join us", href: "/join", key: "join" },
