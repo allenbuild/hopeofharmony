@@ -5768,6 +5768,7 @@ h2 em {
   .site-footer .footer-contact {
     width: 100%;
     justify-self: end;
+    padding-left: 12px;
   }
 }
 
