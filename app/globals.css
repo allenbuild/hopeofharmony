@@ -2297,6 +2297,10 @@ h2 em {
     font-size: clamp(58px, 17vw, 94px);
   }
 
+  .home-mission-card h1 {
+    font-size: clamp(34px, 6vw, 42px);
+  }
+
   .hero-botanical {
     width: calc(100% + 40px);
     height: 560px;
