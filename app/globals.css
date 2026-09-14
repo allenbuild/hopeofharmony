@@ -5460,6 +5460,13 @@ h2 em {
   justify-self: end;
 }
 
+@media (min-width: 981px) {
+  .contact-hero h1 {
+    max-width: none;
+    white-space: nowrap;
+  }
+}
+
 .join-hero .page-hero-aside {
   align-self: start;
 }
