@@ -5581,12 +5581,7 @@ h2 em {
   align-items: center;
 }
 
-.join-hero .page-hero-grid > div:first-child {
-  transform: none;
-}
-
 .join-hero h1 {
-  font-size: clamp(50px, 5vw, 72px);
   white-space: nowrap;
 }
 
