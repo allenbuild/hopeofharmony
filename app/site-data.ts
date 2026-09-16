@@ -91,7 +91,7 @@ export const newsPosts: NewsPost[] = [
     eventDate: "July 22nd, 2025",
     place: "The Kensington",
     author: "Lin Zhang",
-    date: "Sep 5, 2025",
+    date: "Aug 5, 2025",
     likes: 3,
     cover: "/assets/editorial/kensington-1.jpg",
     images: [
