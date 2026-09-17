@@ -1,7 +1,25 @@
 import { PageFrame } from "../components/page-frame";
 import { PageHero } from "../components/page-hero";
 
-const openRoles = ["Vice President", "Secretary", "Public Relations", "Treasurer"];
+const openRoles = ["Public Relations", "Treasurer"];
+
+const additionalMembers = [
+  {
+    role: "Vice President",
+    name: "Olivia Hui",
+    bio: "Olivia likes shopping and taking photos in her free time, as well as, playing viola and looking at music for string quartets. She joined Hope of Harmony to bring more accessibility to music and have a great time with the friends she will be making music with.",
+  },
+  {
+    role: "Secretary",
+    name: "Jonathan Leung",
+    bio: "Jonathan Leung is a junior at Arcadia High School. In his free time he enjoys cooking, traveling, eating with friends, and playing volleyball. Jonathan is joining Hope Of Harmony because he loves music and hopes to share that passion with others around him.",
+  },
+  {
+    role: "Outreach Director",
+    name: "Isabella Budasz",
+    bio: "Isabella really likes collecting stuff like LPS figures and cute stickers. She loves to play her cello and sight read new pieces. For Isabella, Hope of Harmony is such an incredible opportunity to connect with her community and bring music to those it may help the most. She hopes to make people smile and rejoice through their love for music.",
+  },
+];
 
 export default function TeamPage() {
   return (
@@ -43,6 +61,19 @@ export default function TeamPage() {
               community.
             </p>
           </article>
+          {additionalMembers.map((member, index) => (
+            <article
+              className={`team-profile${index % 2 === 1 ? " offset" : ""}`}
+              key={member.role}
+            >
+              <div className="profile-number">0{index + 3}</div>
+              <div className="profile-heading">
+                <p>{member.role}</p>
+                <h2>{member.name}</h2>
+              </div>
+              <p>{member.bio}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -51,7 +82,7 @@ export default function TeamPage() {
           <div className="role-list">
             {openRoles.map((role, index) => (
               <div key={role}>
-                <span>0{index + 3}</span>
+                <span>0{index + additionalMembers.length + 3}</span>
                 <p>{role}</p>
               </div>
             ))}
