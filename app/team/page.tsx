@@ -1,9 +1,14 @@
-import { PageFrame } from "../components/page-frame";
-import { PageHero } from "../components/page-hero";
+import { PageFrame } from "../components/page-frame";import { PageHero } from "../components/page-hero";
 
-const openRoles = ["Public Relations", "Treasurer"];
+const openRoles = ["Public Relations"];
 
 const additionalMembers = [
+
+  {
+    role: "Treasurer",
+    name: "Derek Wang",
+    bio: "Whenever he has free time, Derek enjoys playing tennis, listening to music, traveling to new countries and trying different cuisines. He believes that music brings people together and hopes to help Hope of Harmony spread that love for music throughout the community.",
+  },
   {
     role: "Vice President",
     name: "Olivia Hui",
