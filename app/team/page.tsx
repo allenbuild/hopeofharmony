@@ -1,14 +1,7 @@
-import { PageFrame } from "../components/page-frame";import { PageHero } from "../components/page-hero";
-
-const openRoles = ["Public Relations"];
+import { PageFrame } from "../components/page-frame";
+import { PageHero } from "../components/page-hero";
 
 const additionalMembers = [
-
-  {
-    role: "Treasurer",
-    name: "Derek Wang",
-    bio: "Whenever he has free time, Derek enjoys playing tennis, listening to music, traveling to new countries and trying different cuisines. He believes that music brings people together and hopes to help Hope of Harmony spread that love for music throughout the community.",
-  },
   {
     role: "Vice President",
     name: "Olivia Hui",
@@ -23,6 +16,12 @@ const additionalMembers = [
     role: "Outreach Director",
     name: "Isabella Budasz",
     bio: "Isabella really likes collecting stuff like LPS figures and cute stickers. She loves to play her cello and sight read new pieces. For Isabella, Hope of Harmony is such an incredible opportunity to connect with her community and bring music to those it may help the most. She hopes to make people smile and rejoice through their love for music.",
+  },
+  { role: "Public Relations", name: "", bio: "" },
+  {
+    role: "Treasurer",
+    name: "Derek Wang",
+    bio: "Whenever he has free time, Derek enjoys playing tennis, listening to music, traveling to new countries and trying different cuisines. He believes that music brings people together and hopes to help Hope of Harmony spread that love for music throughout the community.",
   },
 ];
 
@@ -74,24 +73,11 @@ export default function TeamPage() {
               <div className="profile-number">0{index + 3}</div>
               <div className="profile-heading">
                 <p>{member.role}</p>
-                <h2>{member.name}</h2>
+                {member.name && <h2>{member.name}</h2>}
               </div>
-              <p>{member.bio}</p>
+              {member.bio && <p>{member.bio}</p>}
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="roles-section">
-        <div className="container roles-grid">
-          <div className="role-list">
-            {openRoles.map((role, index) => (
-              <div key={role}>
-                <span>0{index + additionalMembers.length + 3}</span>
-                <p>{role}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
