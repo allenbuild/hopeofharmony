@@ -17,7 +17,7 @@ const additionalMembers = [
     name: "Isabella Budasz",
     bio: "Isabella really likes collecting stuff like LPS figures and cute stickers. She loves to play her cello and sight read new pieces. For Isabella, Hope of Harmony is such an incredible opportunity to connect with her community and bring music to those it may help the most. She hopes to make people smile and rejoice through their love for music.",
   },
-  { role: "Public Relations", name: "", bio: "" },
+  { role: "Public Relations", name: "Sabrina Yao", bio: "In her free time, Sabrina enjoys playing piano, dancing, taking photos, trying new foods, and spending time with her friends. She joined Hope of Harmony because music has been an important part of her life for many years. She is excited to be part of a community that brings people together through music." },
   {
     role: "Treasurer",
     name: "Derek Wang",
